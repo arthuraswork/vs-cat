@@ -22,8 +22,6 @@ STYLES = {
 }
 
 
-
-
 def read_config(path):
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
@@ -66,7 +64,10 @@ def draw_line(line: str, words: dict, i):
             sys.stdout.write(char) 
         elif char in words:
             if buf:
-                sys.stdout.write(buf)
+                if buf in words:
+                    sys.stdout.write(f"{STYLES[words[buf]]}{buf}{STYLES['reset']}")
+                else:
+                    sys.stdout.write(buf)
             sys.stdout.write(f"{STYLES[words[char]]}{char}{STYLES['reset']}")   
             buf = ""
         else:
