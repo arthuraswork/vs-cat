@@ -11,6 +11,5 @@ if [ "$ARG" == "install" ]; then
 
 
 else 
-    s
     python3 ./local/bin/vs-cat/vscat.py $ARG
 fi
