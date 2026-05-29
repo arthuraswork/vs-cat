@@ -21,6 +21,8 @@ STYLES = {
     "strike": "\033[9m"
 }
 
+STYLES = STYLES | {s + "-bold":c + "\033[1m" for s, c in STYLES.items()}
+
 
 def read_config(path):
     with open(path, 'r', encoding='utf-8') as f:
@@ -86,12 +88,13 @@ def unpack_words(style, words):
 filename = sys.argv[1]
 filetype = filename.split('.')[-1]
 config_path = sys.argv[2]
+
 config = read_config(config_path)
 lines = read_file(filename)
 
 
 if not filetype in config:
-    exit(f'Config for {filetype} unfound')
+    exit(f'Config for {filetype} unfound. 123')
 
 
 aliases = {
