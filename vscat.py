@@ -62,7 +62,8 @@ def process_line(line: str, words: dict, i):
             else:
                 sys.stdout.write(buf)
             buf = ""
-            sys.stdout.write(char) 
+            sys.stdout.write(char)
+        
         elif char in words:
             if buf:
                 if buf in words:
@@ -73,6 +74,9 @@ def process_line(line: str, words: dict, i):
             buf = ""
         else:
             buf += char
+            if buf in words:
+                sys.stdout.write(f"{STYLES[words[buf]]}{buf}{STYLES['reset']}")
+                buf = ""
         
 def unpack_words(style, words):
     for i, w in enumerate(words):
@@ -94,7 +98,7 @@ lines = read_file(filename)
 
 
 if not filetype in config:
-    exit(f'Config for {filetype} unfound. 123')
+    exit(f'Config for {filetype} unfound')
 
 
 aliases = {

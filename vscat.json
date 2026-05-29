@@ -41,6 +41,8 @@
     {
         "blue": ["0-9"],
         "red": ["[","]"],
+        "yellow-bold" : ["true", "false"],
+        "cyan-bold":["{","}"],
         "strings_view": true
     }
 }
