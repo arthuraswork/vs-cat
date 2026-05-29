@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ARG="$1"
+if [ "$ARG" == "install" ]; then
+
+    ~/
+
+else 
+    python3 lang-cat.py $ARG
+fi

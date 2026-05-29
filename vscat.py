@@ -30,7 +30,7 @@ def read_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         return f.readlines()
     
-def draw_line(line: str, words: dict, i):
+def process_line(line: str, words: dict, i):
     if numeration:
         sys.stdout.write(str(i) + '\t')
     buf = ""
@@ -53,8 +53,7 @@ def draw_line(line: str, words: dict, i):
             elif char not in ["'", '"'] and string:
                 string += char
                 continue
-
-
+            
         if char in [" ", "\n"]:
             if buf in words:
                 sys.stdout.write(f"{STYLES[words[buf]]}{buf}{STYLES['reset']}")
@@ -116,5 +115,5 @@ for style, words in style_config.items():
     full_dict = full_dict | unpack_words(style, words)
 
 for i, line in enumerate(lines):
-    draw_line(line, full_dict, i + 1)
+    process_line(line, full_dict, i + 1)
 
