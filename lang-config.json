@@ -1,0 +1,11 @@
+{
+    "py": 
+    {
+        "blue": ["0-9"],
+        "bold": [":",","],
+        "red": ["if", "else", "def", "class", "return", "elif", "for", "in", "import", "del"],
+        "strings_view": true,
+        "yellow": ["[","]","(",")","{","}"],
+        "numeration": true
+    }   
+}
