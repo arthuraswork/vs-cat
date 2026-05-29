@@ -3,8 +3,8 @@
 ARG="$1"
 if [ "$ARG" == "install" ]; then
 
-    mkdir -p ~/.local/bin/vs-cat
-    cp -r ./vs-cat ~/.local/bin/vs-cat
+    mkdir -p ~/.local/bin
+    cp -r ./vs-cat ~/.local/bin/
     chmod +x ~/.local/bin/vs-cat
 
 else 
