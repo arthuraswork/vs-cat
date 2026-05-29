@@ -5,7 +5,10 @@ if [ "$ARG" == "install" ]; then
 
     mkdir -p ~/.local/bin
     cp -r ./vs-cat ~/.local/bin/
-    chmod +x ~/.local/bin/vs-cat
+    chmod +x ~/.local/bin/vs-cat/vscat
+    chmod +x ~/.local/bin/vs-cat/vscat.py
+    ln -sf ~/.local/bin/vs-cat/vscat ~/.local/bin/vscat
+    
 
 else 
     python3 vscat.py $ARG
