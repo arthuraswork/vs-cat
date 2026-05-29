@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ARG="$1"
+CONFIGPATH=realpath ~/.local/bin/vs-cat/vscat.json
 if [ "$ARG" == "install" ]; then
 
     mkdir -p ~/.local/bin
@@ -11,5 +12,5 @@ if [ "$ARG" == "install" ]; then
 
 
 else 
-    python3 ~/.local/bin/vs-cat/vscat.py $ARG
+    python3 ~/.local/bin/vs-cat/vscat.py $ARG $CONFIGPATH
 fi

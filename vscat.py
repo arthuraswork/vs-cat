@@ -85,7 +85,7 @@ def unpack_words(style, words):
 
 filename = sys.argv[1]
 filetype = filename.split('.')[-1]
-config_path = '~/.local/bin/vs-cat/vscat.json'
+config_path = sys.arg[2]
 config = read_config(config_path)
 lines = read_file(filename)
 
