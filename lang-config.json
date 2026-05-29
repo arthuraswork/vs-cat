@@ -1,4 +1,16 @@
 {
+
+    "go": {
+        "bold": ["+", "=",":=","==", "-=", "+=", "*", ",", "[", "]", "||", "&&", "|"],
+        "magenta": ["if", "for", "else", "func", "package", "import", "return"],
+        "cyan": ["int", "float32"],
+        "green":["string"],
+        "yellow": ["{","}", "(", ")"],
+        "strings_view": true
+        
+
+    },
+
     "py": 
     {
         "blue": ["0-9"],
@@ -7,5 +19,22 @@
         "strings_view": true,
         "yellow": ["[","]","(",")","{","}"],
         "numeration": true
-    }   
+    },
+    "c":
+    {
+        "strings_view": true,
+        "numeration": true,
+        "blue": ["0-9"],
+        "red": [
+            "if", "else", "while", "for", "do", "switch", "case", "default",
+            "break", "continue", "return", "goto",
+            "int", "char", "float", "double", "void", "long", "short", "unsigned", "signed",
+            "struct", "enum", "union", "typedef",
+            "static", "const", "volatile", "register", "extern",
+            "sizeof", "include"
+        ],
+        "yellow": ["(", ")", "[", "]", "{", "}", "<", ">", ";", ":"],
+        "magenta": ["=", "==", "!=", "<=", ">=", "&&", "||", "!", "&", "|", "^", "~", "<<", ">>"],
+        "green": ["#"]
+    }
 }
