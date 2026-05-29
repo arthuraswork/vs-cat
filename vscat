@@ -8,8 +8,9 @@ if [ "$ARG" == "install" ]; then
     chmod +x ~/.local/bin/vs-cat/vscat
     chmod +x ~/.local/bin/vs-cat/vscat.py
     ln -sf ~/.local/bin/vs-cat/vscat ~/.local/bin/vscat
-    
+
 
 else 
-    python3 vscat.py $ARG
+    s
+    python3 ./local/bin/vs-cat/vscat.py $ARG
 fi
